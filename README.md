@@ -78,6 +78,6 @@
 
 ![](https://github.com/user-attachments/assets/40d3c040-af56-4d43-b869-20a362deaa4c)
 
-отримуєму наш флаг: `**deadface{D1g_d0wN_D33p!}**`
+отримуєму наш флаг: **`deadface{D1g_d0wN_D33p!}`**
 
 
