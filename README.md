@@ -29,7 +29,7 @@
 ### 2.2. Прихований символ пробілу (Zero-Width Steganography)
 Під час виділення тексту опису завдання було помічено порожні невидимі символи між рядками.
 
-![Виділення невидимого тексту в описі](https://github.com/user-attachments/assets/9c7ca851-1f20-4321-8f96-cda6cdb247a1)
+![Виділення невидимого тексту в описі]([https://github.com/user-attachments/assets/9c7ca851-1f20-4321-8f96-cda6cdb247a1](https://github.com/user-attachments/assets/5afddc71-20c0-4f3f-87f6-740071c1dd07))
 
 Скопіювавши ці символи та перевівши їх із невидимого юнікоду (Zero-Width Space / Non-Joiner) у двійковий формат ASCII, отримано наступну послідовність бітів:
 
