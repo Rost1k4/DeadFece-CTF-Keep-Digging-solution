@@ -29,7 +29,27 @@
 ### 2.2. Прихований символ пробілу (Zero-Width Steganography)
 Під час виділення тексту опису завдання було помічено порожні невидимі символи між рядками.
 
-![Виділення невидимого тексту в описі]([https://github.com/user-attachments/assets/9c7ca851-1f20-4321-8f96-cda6cdb247a1](https://github.com/user-attachments/assets/5afddc71-20c0-4f3f-87f6-740071c1dd07))
+![Виділення невидимого тексту в описі](https://github.com/user-attachments/assets/5afddc71-20c0-4f3f-87f6-740071c1dd07)
+
+**Через інструменти розробника видно:**
+
+![через Інструменти розробника видно](https://github.com/user-attachments/assets/71bd264f-0e07-4985-a671-3f22d598c712)
+
+### 2.3 За допомогою спеціального пейлоаду 
+```
+[...document.querySelector("body").innerText]
+  .map((c, i) => ({
+    i,
+    char: c,
+    hex: c.codePointAt(0).toString(16).toUpperCase()
+  }))
+  .filter(x =>
+    ["200B","200C","200D","2060","FEFF","00AD"].includes(x.hex)
+  )
+```
+ми можем переглянути ці всі символи 
+
+![](https://github.com/user-attachments/assets/4148c2b5-dbb9-4a37-8e4d-803065096bab)
 
 Скопіювавши ці символи та перевівши їх із невидимого юнікоду (Zero-Width Space / Non-Joiner) у двійковий формат ASCII, отримано наступну послідовність бітів:
 
@@ -44,24 +64,20 @@
 01111001 01111101    
 ```
 
-
-![[Pasted image 20261019005931.png]]
-![[Pasted image 20261019005953.png]]
-![[Pasted image 20261019010111.png]]
-![[Pasted image 20261019010402.png]]
 це перетворюємо в hex і получаєм  
-
+```
 66 6C 61 67 7B 73 30 6C  
 76 33 5F 6D 33 5F 68 34  
 72 64 33 72 5F 41 49 5F  
 64 34 64 64 79 7D 
-
+```
 це вже декодується як flag{s0lv3_m3_h4rd3r_AI_d4ddy} (цей флаг теж не підходить)
 
-через Ghex ми відкриваєм редактор зображення і міняємо розмір зображеня
-02 9E - 670 пікселів в 02 DE - 734 пікселі.
+через **Ghex** ми відкриваєм редактор зображення і міняємо розмір зображеня
+`02 9E` - 670 пікселів в `02 DE` - 734 пікселі.
+
+![](https://github.com/user-attachments/assets/40d3c040-af56-4d43-b869-20a362deaa4c)
+
+отримуєму наш флаг: `**deadface{D1g_d0wN_D33p!}**`
 
 
-
-
-![[Pasted image 20261019011557.png]]
