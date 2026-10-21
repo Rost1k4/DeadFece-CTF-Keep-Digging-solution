@@ -7,6 +7,8 @@
 **Хеш файлу (SHA256):** `12582c19c665ee4c7c8d4517ccb8f3559356620553970b235d8aad4e0b4ff8e2`  
 **Посилання на файл:** [Download Image](https://deadface.sfo3.cdn.digitaloceanspaces.com/2026/challenges/steg/steg06/keep_digging.jpg)
 
+прапор: `deadface{D1g_d0wN_D33p!}`
+
 ---
 
 ## 1. Вступ та опис завдання
